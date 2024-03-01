@@ -21,7 +21,7 @@
                     </div>
                     <!-- End of logo/text -->
                     <div class="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
-                        <a href="#" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-white hover:border-white">Home</a>
+                        <a href="/" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-white hover:border-white">Home</a>
                         <a href="#" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-white hover:border-white">About</a>
                         <a href="#" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-white hover:border-white">Services</a>
                         <a href="#" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-white hover:border-white">Contact</a>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="-mr-2 flex items-center sm:hidden">
                     <!-- Mobile menu button -->
-                    <button type="button" class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                    <button id="mobile-menu-btn" type="button" class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
                         <!-- Heroicon name: menu -->
     
@@ -61,7 +61,7 @@
         <!-- Mobile menu, toggle classes based on menu state. Open: "block", closed: "hidden" -->
         <div class="hidden sm:hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-900">Home</a>
+                <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-900">Home</a>
                 <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">About</a>
                 <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Services</a>
                 <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Contact</a>
@@ -337,16 +337,13 @@
     
 
     <script>
-        document.getElementById('mobile-menu').addEventListener('click', function () {
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
             var mobileMenu = document.getElementById('mobile-menu');
-            var isVisible = mobileMenu.classList.contains('hidden');
-            if (isVisible) {
-                mobileMenu.classList.remove('hidden');
-            } else {
-                mobileMenu.classList.add('hidden');
-            }
+            mobileMenu.classList.toggle('hidden');
         });
     </script>
+
+
 </body>
 
 </html>
